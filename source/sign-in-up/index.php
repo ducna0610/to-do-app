@@ -32,7 +32,7 @@ if (isset($_SESSION['id_user'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Signing</title>
 </head>
 
 <body>
@@ -100,10 +100,9 @@ if (isset($_SESSION['id_user'])) {
                         <div class="group">
                             <input type="submit" class="button" value="Sign up" id="btn_sign_up">
                         </div>
-                        <!-- <div class="hr"></div>
                         <div class="foot-lnk">
                             <label for="tab-1">Already Member?</a>
-                        </div> -->
+                        </div>
                     </form>
                 </div>
             </div>

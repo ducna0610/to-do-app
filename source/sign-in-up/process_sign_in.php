@@ -12,7 +12,7 @@ if (isset($_POST['remember'])) {
 }
 
 if ($email == '' || $password == '') {
-    $_SESSION['error'] = "Á à tắt Javascript à ko có đâu:)";
+    $_SESSION['error'] = "Á à tắt Javascript à hacker lỏ:)";
     header('location: index.php');
     exit;
 }
@@ -73,4 +73,3 @@ if ($number_rows == 1) {
 }
 
 mysqli_close($connect);
-// header('location: ../index.php');

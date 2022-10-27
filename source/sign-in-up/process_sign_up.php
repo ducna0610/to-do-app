@@ -5,8 +5,8 @@ require '../connect.php';
 $name = addslashes($_POST['name']);
 $email = addslashes($_POST['email']);
 
-$password = ($_POST['password']);
-$confirm_password = ($_POST['confirm_password']);
+$password = addslashes($_POST['password']);
+$confirm_password = addslashes($_POST['confirm_password']);
 
 // email da ton tai
 $sql = "SELECT * FROM Users WHERE email = '$email'";
@@ -14,7 +14,7 @@ $result = mysqli_query($connect, $sql);
 $number_rows = mysqli_num_rows($result);
 
 if ($number_rows == 1) {
-    $_SESSION['error'] = "Ai đó đã sài email này rồi!";
+    $_SESSION['error'] = "Ai đó đã dùng email này rồi!";
     header('location: index.php');
     exit;
 }
@@ -26,7 +26,7 @@ if ($password != $confirm_password) {
 }
 
 if ($name == '' || $email == '' || $password == '' || $confirm_password == '') {
-    $_SESSION['error'] = "Á à tắt Javascript à ko có đâu:)";
+    $_SESSION['error'] = "Á à tắt Javascript à hacker lỏ:)";
     header('location: index.php');
     exit;
 }

@@ -12,12 +12,12 @@ web cơ bản trên con đường đi tìm mindset
 ### Intro
 ![intro-to-do-app](./intro-to-do-app.png)
 
-### Chức năng
+### Tính năng
 
-Bug chính là chức năng.
+Bug chính là tính năng.
 
 
 ---
- <div align="center">
+<div align="center">
   &copy; 2022 Nguyen Anh Duc - ducna0610
 </div>
