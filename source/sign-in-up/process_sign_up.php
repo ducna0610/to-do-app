@@ -42,11 +42,13 @@ $result = mysqli_query($connect, $sql);
 
 $each = mysqli_fetch_array($result);
 
-
 $_SESSION['id_user'] = $each['id_user'];
 $_SESSION['name'] = $each['name'];
 $_SESSION['permission'] = 0;
 
 mysqli_close($connect);
+
+include '../mail/send_mail.php';
+sendMail($email, $name, 'Đăng ký tài khoản thành công', 'Cảm ơn bạn đã đăng ký:3 <br> Tặng bạn 1 con iPhone 14 ==> chi tiết:  <a href = "hacked.com">nhấn vào đây</a>');
 
 header('location: ../index.php');
