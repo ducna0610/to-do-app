@@ -26,7 +26,7 @@ session_start();
                 <input type="text" class="form-control m-auto" name="search" placeholder="search todos">
             </form>
             <?php if (isset($_SESSION['id_user'])) { ?>
-                <?php include 'no_task.php' ?>
+                <?php include 'no_todo.php' ?>
             <?php } ?>
         </header>
 
