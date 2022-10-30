@@ -28,7 +28,7 @@
                                 </a>
                             </th>
                             <th scope="col">
-                                Tasks
+                                Todos
                                 &nbsp;
                                 <a href="" class="">
                                     <i class="fa fa-sort" aria-hidden="true"></i>
@@ -65,7 +65,7 @@
                                             <input type="text" value="<?php echo $each[3] ?>" name="password">
                                         </span>
                                     </td>
-                                    <td><span> <?php echo $no_task_by_user[$over++][0] ?> </span></td>
+                                    <td><span> <?php echo $no_todo_by_user[$over++][0] ?> </span></td>
                                     <td><span><?php echo $each[4] ?></span></td>
                                     <td>
                                         <input type="submit" value="change">

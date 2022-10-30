@@ -4,10 +4,8 @@ require '../connect.php';
 
 $id_user = $_GET['id_user'];
 
-$sql = "delete Users
-where id_user = $id_user";
-
-die($sql);
+$sql = "DELETE Users
+WHERE id_user = $id_user";
 
 mysqli_query($connect, $sql);
 

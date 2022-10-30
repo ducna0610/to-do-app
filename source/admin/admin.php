@@ -6,11 +6,11 @@ if (empty($_SESSION['id_user']) || ($_SESSION['permission']) == 0) {
     header('location: index.php');
 }
 
-$sql = "select * from Users";
+$sql = "SELECT * FROM Users";
 
 $users = mysqli_query($connect, $sql);
 
-$sql = "select * from Users where permission = 1";
+$sql = "SELECT * FROM Users WHERE permission = 1";
 
 $admins = mysqli_query($connect, $sql);
 
@@ -34,7 +34,7 @@ $pages = ceil($no_user / $limit);
 $over = $limit * ($page - 1);
 
 
-$sql = "select id_user, name, email, password, online from Users where permission = 0 limit $limit offset $over";
+$sql = "SELECT id_user, name, email, password, online from Users where permission = 0 LIMIT $limit OFFSET $over";
 
 $result = mysqli_query($connect, $sql);
 
@@ -43,12 +43,12 @@ $array = mysqli_fetch_all($result);
 $num_rows = mysqli_num_rows($result);
 
 $sql = "SELECT COUNT(*), Users.id_user
-FROM Users LEFT JOIN Tasks
-ON Users.id_user = Tasks.id_user
+FROM Users LEFT JOIN Todos
+ON Users.id_user = Todos.id_user
 WHERE permission = 0
 GROUP BY id_user";
 
-$no_task_by_user = mysqli_fetch_all(mysqli_query($connect, $sql));
+$no_todo_by_user = mysqli_fetch_all(mysqli_query($connect, $sql));
 
 mysqli_close($connect);
 
@@ -77,8 +77,8 @@ mysqli_close($connect);
             <!-- Total users -->
             <?php include './total_users.php' ?>
 
-            <!-- Total tasks -->
-            <?php include './total_tasks.php'; ?>
+            <!-- Total todos -->
+            <?php include './total_todos.php'; ?>
 
         </div>
     </div>
