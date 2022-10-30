@@ -2,11 +2,9 @@
 web cơ bản trên con đường đi tìm mindset
 ### Các thư mục chủ yếu
 
-| Tên thư mục | Mô tả |
-| ---- | ---- |
-| [Document](./document) | Tài liệu |
-| [Database](./database) | Cơ sở dữ liệu |
-| [Sourse code](./source) | Code trang web |
+| Tài liệu | Cơ sở dữ liệu | Code trang web |
+| ---- | ---- | ---- |
+| [Document](./document) | [Database](./database) | [Sourse code](./source) |
 
 
 ### Intro
