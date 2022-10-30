@@ -1,12 +1,19 @@
-<?php
+<?php   
+session_start();
+
+if(empty($_GET['token_expire'])) {
+    $_SESSION['error'] = "Tài khoản không tồn tại!";
+    header('location: ./sign-in-up');
+    exit;
+}
+
 $token_expire = $_GET['token_expire'];
 require '../connect.php';
 $sql = "SELECT * FROM forgot_password WHERE token_expire = '$token_expire'";
 $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result) === 0) {
-    session_start();
-    $_SESSION['error'] = "Tài khoản không tồn tại!";
-    header('location: index.php');
+    $_SESSION['error'] = "Token đã hết hiệu lực vui lòng chọn lại quên mật khẩu!";
+    header('location: ./sign-in-up');
     exit;
 }
 ?>

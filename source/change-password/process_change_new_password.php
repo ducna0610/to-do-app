@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $token_expire = $_POST['token_expire'];
 $password = $_POST['password'];
@@ -10,10 +11,9 @@ WHERE token_expire = '$token_expire'";
 
 $result = mysqli_query($connect, $sql);
 
-if(mysqli_num_rows($result) === 0) {
-    session_start();
+if (mysqli_num_rows($result) === 0) {
     $_SESSION['error'] = "Tài khoản không tồn tại!";
-    header('location: index.php');
+    header('location: ../sign-in-up');
     exit;
 }
 
@@ -33,3 +33,6 @@ WHERE
 id_user = '$id_user'";
 
 mysqli_query($connect, $sql);
+
+$_SESSION['error'] = "Đổi mật khẩu thành công!";
+header('location: ../sign-in-up');
