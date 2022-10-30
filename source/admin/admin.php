@@ -3,7 +3,7 @@ session_start();
 require '../connect.php';
 
 if (empty($_SESSION['id_user']) || ($_SESSION['permission']) == 0) {
-    header('location: index.php');
+    header('location: ../index.php');
 }
 
 $sql = "SELECT * FROM Users";
