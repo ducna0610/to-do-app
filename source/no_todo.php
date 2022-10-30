@@ -3,7 +3,7 @@ require 'connect.php';
 
 if (isset($_SESSION['id_user']))
     $id_user = $_SESSION['id_user'];
-$sql = "select id_task from Tasks where id_user = '$id_user'";
+$sql = "SELECT id_todo FROM Todos WHERE id_user = '$id_user'";
 
 $result = mysqli_query($connect, $sql);
 

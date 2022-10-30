@@ -73,10 +73,9 @@ if (isset($_SESSION['id_user'])) {
                         <div class="group">
                             <input type="submit" class="button" value="Sign In" id="btn_sign_in">
                         </div>
-                        <!-- <div class="hr"></div>
                         <div class="foot-lnk">
-                            <a href="#forgot">Forgot Password?</a>
-                        </div> -->
+                            <a href="./forgot_password.php">Forgot Password?</a>
+                        </div>
                     </form>
                 </div>
                 <div class="sign-up-htm">

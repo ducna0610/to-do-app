@@ -2,9 +2,9 @@
 
 require 'connect.php';
 
-$id_task = $_GET['id_task'];
+$id_todo = $_GET['id_todo'];
 
-$sql = "delete from Tasks where id_task = '$id_task'";
+$sql = "DELETE FROM Todos WHERE id_todo = '$id_todo'";
 
 mysqli_query($connect, $sql);
 

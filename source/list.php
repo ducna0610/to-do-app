@@ -4,7 +4,7 @@ require 'connect.php';
 
 $id_user = $_SESSION['id_user'];
 
-$sql = "select content, id_task from Tasks where id_user = '$id_user'";
+$sql = "SELECT content, id_todo FROM Todos WHERE id_user = '$id_user'";
 
 $result = mysqli_query($connect, $sql);
 
@@ -17,7 +17,7 @@ mysqli_close($connect);
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <span><?php echo $array[$i][0] ?></span>
 
-        <a href="delete.php?id_task=<?php echo $array[$i][1] ?>">
+        <a href="delete.php?id_todo=<?php echo $array[$i][1] ?>">
             <i class="far fa-trash-alt delete"></i>
         </a>
     </li>

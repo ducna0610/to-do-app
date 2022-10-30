@@ -44,7 +44,7 @@ session_start();
             <?php } ?>
         </ul>
         <!--  FORM  -->
-        <form action="process_insert_task.php" method="post" class="add text-center my-4">
+        <form action="process_insert_todo.php" method="post" class="add text-center my-4">
             <label for="add" class="add text-light">Add a new todo:</label>
             <input type="text" class="form-control m-auto" name="content" id="add">
         </form>
