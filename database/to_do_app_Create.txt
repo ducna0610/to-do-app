@@ -19,6 +19,6 @@ CREATE TABLE Users (
   online     timestamp DEFAULT current_timestamp() NOT NULL, 
   PRIMARY KEY (id_user), 
   UNIQUE INDEX (email));
-ALTER TABLE forgot_password ADD CONSTRAINT FK_Users_fotgot_password FOREIGN KEY (id_user) REFERENCES Users (id_user);
+ALTER TABLE forgot_password ADD CONSTRAINT FK_Users_forgot_password FOREIGN KEY (id_user) REFERENCES Users (id_user);
 ALTER TABLE Todos ADD CONSTRAINT FK_Users_Todos FOREIGN KEY (id_user) REFERENCES Users (id_user) ON UPDATE Cascade ON DELETE Cascade;
 
