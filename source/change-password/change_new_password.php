@@ -2,8 +2,8 @@
 session_start();
 
 if(empty($_GET['token_expire'])) {
-    $_SESSION['error'] = "Tài khoản không tồn tại!";
-    header('location: ./sign-in-up');
+    $_SESSION['error'] = "Hacker lỏ :)";
+    header('location: ../sign-in-up/');
     exit;
 }
 
@@ -12,8 +12,8 @@ require '../connect.php';
 $sql = "SELECT * FROM forgot_password WHERE token_expire = '$token_expire'";
 $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result) === 0) {
-    $_SESSION['error'] = "Token đã hết hiệu lực vui lòng chọn lại quên mật khẩu!";
-    header('location: ./sign-in-up');
+    $_SESSION['error'] = "Link đã hết hiệu lực vui lòng chọn lại quên mật khẩu!";
+    header('location: ../sign-in-up/');
     exit;
 }
 ?>
@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) === 0) {
     <form action="process_change_new_password.php" method="post">
         <input type="hidden" name="token_expire" value="<?php echo $token_expire ?>">
         Mật khẩu mới
-        <input type="text" name="password">
+        <input type="text" name="password" required>
         <br>
         <button>Đổi mật khẩu</button>
     </form>

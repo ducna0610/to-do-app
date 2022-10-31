@@ -9,7 +9,7 @@
 <body>
     <form action="process_forgot_password.php" method="post">
         Email
-        <input type="text" name="email" placeholder="Email của bạn">
+        <input type="text" name="email" placeholder="Email của bạn" required>
         <button>Xác nhận</button>
     </form>
 </body>

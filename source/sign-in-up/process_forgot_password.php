@@ -5,6 +5,11 @@ function current_url() {
     return $url;
 }
 
+if(($_POST['email']) === '') {
+    $_SESSION['error'] = "Hacker lỏ :)";
+    header('location: index.php');
+    exit;
+}
 
 $email = $_POST['email'];
 
