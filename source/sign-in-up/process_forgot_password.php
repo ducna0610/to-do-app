@@ -36,7 +36,7 @@ if(mysqli_num_rows($result) === 1) {
 
     require '../mail/send_mail.php';
     $title = "Change New Password";
-    $content = '<a href="' . $link . '">Bấm vào đây để đổi mật khẩu</a> (link có hiệu lực trong 24h)';
+    $content = '<a href="' . $link . '">Bấm vào đây để đổi mật khẩu</a> (link chỉ có hiệu lực trong ngày hôm nay!)';
     sendMail($email, $name, $title, $content);
     header('location: https://mail.google.com');
     exit;
