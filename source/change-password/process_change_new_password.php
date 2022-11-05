@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-die($_POST['password']);
-
-if(($_POST['password']) === '') {
+if (($_POST['password']) === '') {
     $_SESSION['error'] = "Hacker lỏ :)";
     header('location: ../sign-in-up/');
     exit;
