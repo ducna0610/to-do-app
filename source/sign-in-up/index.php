@@ -64,7 +64,7 @@ if (isset($_SESSION['id_user'])) {
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Password</label>
-                            <input id="pass" type="text" class="input" data-type="text" name="password" required>
+                            <input id="pass" type="password" class="input" data-type="text" name="password" required>
                         </div>
                         <div class="group">
                             <input id="check" type="checkbox" class="check" checked name="remember">
@@ -90,11 +90,11 @@ if (isset($_SESSION['id_user'])) {
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Password</label>
-                            <input id="pass" type="text" class="input" data-type="text" name="password" required>
+                            <input id="pass" type="password" class="input" data-type="text" name="password" required>
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Repeat Password</label>
-                            <input id="pass" type="text" class="input" data-type="text" name="confirm_password" required>
+                            <input id="pass" type="password" class="input" data-type="text" name="confirm_password" required>
                         </div>
                         <div class="group">
                             <input type="submit" class="button" value="Sign up" id="btn_sign_up">
