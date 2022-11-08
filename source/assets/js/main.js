@@ -19,3 +19,10 @@ searchFormInput.addEventListener("keyup", (e) => {
   const value = searchFormInput.value.toLowerCase().trim();
   filterItems(value);
 });
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
