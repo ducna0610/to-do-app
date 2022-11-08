@@ -21,7 +21,7 @@ mysqli_close($connect);
         <div>
             <form action="process_update_todo.php" method="post">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $each['id_todo'] ?>">
+                <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $each['id_todo'] ?>">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
 
