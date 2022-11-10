@@ -37,9 +37,9 @@ session_start();
             <?php } else { ?>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span>This is example.</span>
-                    <a href="#">
-                        <i class="far fa-trash-alt delete"></i>
-                    </a>
+                    <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $each['id_todo'] ?>">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
                 </li>
             <?php } ?>
         </ul>
