@@ -16,6 +16,7 @@ if (isset($_COOKIE['remember'])) {
         $_SESSION['name'] = $each['name'];
         $_SESSION['permission'] = $each['permission'];
     }
+    mysqli_close($connect);
 }
 
 if (isset($_SESSION['id_user'])) {
