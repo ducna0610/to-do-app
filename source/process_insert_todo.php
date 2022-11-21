@@ -8,7 +8,8 @@ if (isset($_SESSION['id_user'])) {
 
     $id_user = $_SESSION['id_user'];
 
-    $content = $_POST['content'];
+    // Chong XSS
+    $content = htmlentities($_POST['content']);
 
     $sql = "INSERT INTO Todos (content, id_user)
     VALUES ('$content', '$id_user')";
