@@ -40,7 +40,7 @@ if (isset($_SESSION['id_user'])) {
     <div class="login-wrap">
         <div class="login-html">
             <div>
-                <a href="../index.php">
+                <a href="../">
                     <button style="color: red; padding: 10px 20px">HOME</button>
                 </a>
             </div>

@@ -17,8 +17,8 @@ if ($email == '' || $password == '') {
     exit;
 }
 
-date_default_timezone_set('UTC');
-$date = date("Y-m-d G:i:s", time() + 25200);
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+$date = date("Y-m-d G:i:s", time());
 
 $sql = "SELECT * FROM Users
 WHERE email = '$email' AND password = '$password'";
@@ -55,12 +55,12 @@ if ($number_rows == 1) {
         header('location: ../admin');
         exit;
     } else {
-        header('location: ../index.php');
+        header('location: ../');
         exit;
     }
 } else {
     $_SESSION['error'] = "Tài khoản hoặc mật khẩu không chính xác!";
-    header('location: index.php');
+    header('location: ./');
     exit;
 }
 
