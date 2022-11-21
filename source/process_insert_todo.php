@@ -8,6 +8,10 @@ if (isset($_SESSION['id_user'])) {
 
     $id_user = $_SESSION['id_user'];
 
+    if ($_POST['content'] === '') {
+        header('location: ./');
+        exit;
+    }
     // Chong XSS
     $content = htmlentities($_POST['content']);
 
@@ -19,4 +23,4 @@ if (isset($_SESSION['id_user'])) {
     mysqli_close($connect);
 }
 
-header('location: index.php');
+header('location: ./');
