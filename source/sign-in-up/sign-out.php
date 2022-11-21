@@ -9,4 +9,4 @@ $_SESSION['permission'] = 0;
 
 setcookie('remember', null, -1);
 
-header('location: ../index.php');
+header('location: ../');

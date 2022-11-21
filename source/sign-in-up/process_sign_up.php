@@ -2,11 +2,12 @@
 session_start();
 require '../connect.php';
 
-$name = addslashes($_POST['name']);
-$email = addslashes($_POST['email']);
+// Chong XSS + SQL Injection
+$name = htmlentities(addslashes($_POST['name']));
+$email = htmlentities(addslashes($_POST['email']));
 
-$password = addslashes($_POST['password']);
-$confirm_password = addslashes($_POST['confirm_password']);
+$password = htmlentities(addslashes($_POST['password']));
+$confirm_password = htmlentities(addslashes($_POST['confirm_password']));
 
 // email da ton tai
 $sql = "SELECT * FROM Users WHERE email = '$email'";
