@@ -14,7 +14,7 @@ if (isset($_POST['remember'])) {
 
 if ($email == '' || $password == '') {
     $_SESSION['error'] = "Á à tắt Javascript à hacker lỏ:)";
-    header('location: index.php');
+    header('location: ./');
     exit;
 }
 
