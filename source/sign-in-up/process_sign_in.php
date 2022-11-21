@@ -49,18 +49,10 @@ if ($number_rows == 1) {
         mysqli_query($connect, $sql);
 
         setcookie('remember', $token, time() + 60 * 60 * 24 * 30);
-
-        if ($each['permission'] == 1) {
-            header('location: ../admin/admin.php');
-            exit;
-        } else {
-            header('location: ../index.php');
-            exit;
-        }
     }
 
     if ($each['permission'] == 1) {
-        header('location: ../admin/admin.php');
+        header('location: ../admin');
         exit;
     } else {
         header('location: ../index.php');

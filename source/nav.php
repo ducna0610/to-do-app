@@ -8,7 +8,7 @@
   <?php } ?>
   <?php if (isset($_SESSION['permission'])) { ?>
     <?php if ($_SESSION['permission'] == 1) { ?>
-      <a href="./admin/admin.php" class="nav-link">Admin</a>
+      <a href="./admin" class="nav-link">Admin</a>
     <?php } ?>
 
     <?php if ($_SESSION['permission'] == 0) { ?>
