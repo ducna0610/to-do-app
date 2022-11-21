@@ -2,8 +2,6 @@
 
 require 'connect.php';
 
-$id_user = $_SESSION['id_user'];
-
 $sql = "SELECT * FROM Todos WHERE id_user = '$id_user'";
 
 $result = mysqli_query($connect, $sql);

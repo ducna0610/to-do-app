@@ -1,5 +1,6 @@
 <?php
 session_start();
+$id_user = isset($_SESSION['id_user']) ? $_SESSION['id_user'] : null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
