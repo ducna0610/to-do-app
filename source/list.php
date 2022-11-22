@@ -14,7 +14,7 @@ mysqli_close($connect);
 
 <?php foreach ($result as $each) { ?>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span><?php echo $each['content'] ?></span>
+        <span><?php echo htmlentities($each['content']) ?></span>
 
         <div>
             <form action="process_update_todo.php" method="post">
@@ -36,7 +36,7 @@ mysqli_close($connect);
                                 <div class="form-group">
                                     <label for="exampleInput">Content: </label>
                                     <input type="hidden" value="<?php echo $each['id_todo'] ?>" name="id_todo">
-                                    <input type="text" class="form-control" id="exampleInput" placeholder="Content" value="<?php echo $each['content'] ?>" name="new_content">
+                                    <input type="text" class="form-control" id="exampleInput" placeholder="Content" value="<?php echo htmlentities($each['content']) ?>" name="new_content">
                                 </div>
 
                             </div>

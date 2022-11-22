@@ -13,7 +13,7 @@ if (isset($_SESSION['id_user'])) {
         exit;
     }
     // Chong XSS
-    $content = htmlentities($_POST['content']);
+    $content = ($_POST['content']);
 
     $sql = "INSERT INTO Todos (content, id_user)
     VALUES ('$content', '$id_user')";
