@@ -2,17 +2,12 @@
 <?php
 session_start();
 
-if (isset($_SESSION['id_user'])) {
+if ((isset($_SESSION['id_user'])) && ($_POST['content'] !== '')) {
 
     require './connect.php';
 
     $id_user = $_SESSION['id_user'];
 
-    if ($_POST['content'] === '') {
-        header('location: ./');
-        exit;
-    }
-    // Chong XSS
     $content = ($_POST['content']);
 
     $sql = "INSERT INTO Todos (content, id_user)
