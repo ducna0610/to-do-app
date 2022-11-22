@@ -3,7 +3,7 @@ session_start();
 require '../connect.php';
 
 if (empty($_SESSION['id_user']) || ($_SESSION['permission']) == 0) {
-    header('location: ../index.php');
+    header('location: ../');
 }
 
 $sql = "SELECT * FROM Users";
@@ -28,7 +28,6 @@ if (isset($_GET['page']))
 $limit = 8;
 
 $pages = ceil($no_user / $limit);
-// $pages = 100;
 
 
 $over = $limit * ($page - 1);

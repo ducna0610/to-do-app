@@ -51,27 +51,27 @@
                                 <tr>
                                     <td>
                                         <span>
-                                            <input type="text" value="<?php echo $each[0] ?>" readonly name="id_user">
+                                            <input type="text" value="<?php echo htmlentities($each[0]) ?>" readonly name="id_user">
                                         </span>
                                     </td>
                                     <td>
                                         <span>
-                                            <input type="text" value="<?php echo $each[1] ?>" name="name">
+                                            <input type="text" value="<?php echo htmlentities($each[1]) ?>" name="name">
                                         </span>
                                     </td>
-                                    <td><span><?php echo $each[2]  ?></span></td>
+                                    <td><span><?php echo htmlentities($each[2])  ?></span></td>
                                     <td>
                                         <span>
-                                            <input type="text" value="<?php echo $each[3] ?>" name="password">
+                                            <input type="text" value="<?php echo htmlentities($each[3]) ?>" name="password">
                                         </span>
                                     </td>
                                     <td><span> <?php echo $no_todo_by_user[$over++][0] ?> </span></td>
-                                    <td><span><?php echo $each[4] ?></span></td>
+                                    <td><span><?php echo htmlentities($each[4]) ?></span></td>
                                     <td>
                                         <input type="submit" value="change">
                                     </td>
                                     <td>
-                                        <a onclick="validate()" href="./delete.php?id_user=<?php echo $each[0] ?>">
+                                        <a onclick="validate()" href="./delete.php?id_user=<?php echo htmlentities($each[0]) ?>">
                                             <i class="fas fa-trash-alt fa-1x"></i>
                                         </a>
                                     </td>

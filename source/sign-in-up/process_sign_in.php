@@ -3,8 +3,8 @@ session_start();
 require '../connect.php';
 
 // Chong XSS + SQL Injection
-$email = htmlentities(addslashes($_POST['email']));
-$password = htmlentities(addslashes($_POST['password']));
+$email = addslashes($_POST['email']);
+$password = addslashes($_POST['password']);
 
 if (isset($_POST['remember'])) {
     $remember = true;
