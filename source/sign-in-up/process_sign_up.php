@@ -52,4 +52,4 @@ mysqli_close($connect);
 include '../mail/send_mail.php';
 sendMail($email, $name, 'Đăng ký tài khoản thành công', 'Cảm ơn bạn đã đăng ký:3 <br> Tặng bạn 1 con iPhone 14 ==> chi tiết:  <a href = "hacked.com">nhấn vào đây</a>');
 
-header('location: ../index.php');
+header('location: ../');
