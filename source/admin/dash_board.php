@@ -71,7 +71,7 @@
                                         <input type="submit" value="change">
                                     </td>
                                     <td>
-                                        <a onclick="validate()" href="./delete.php?id_user=<?php echo htmlentities($each[0]) ?>">
+                                        <a onclick="return confirm('Ure sure?')" href=" ./delete.php?id_user=<?php echo htmlentities($each[0]) ?>">
                                             <i class="fas fa-trash-alt fa-1x"></i>
                                         </a>
                                     </td>
