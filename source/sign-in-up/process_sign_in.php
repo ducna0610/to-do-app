@@ -12,7 +12,7 @@ if (isset($_POST['remember'])) {
     $remember = false;
 }
 
-if ($email == '' || $password == '') {
+if ($email === '' || $password === '') {
     $_SESSION['error'] = "Á à tắt Javascript à hacker lỏ:)";
     header('location: ./');
     exit;
@@ -28,7 +28,7 @@ $result = mysqli_query($connect, $sql);
 
 $number_rows = mysqli_num_rows($result);
 
-if ($number_rows == 1) {
+if ($number_rows === 1) {
     $each = mysqli_fetch_array($result);
     $id_user = $each['id_user'];
 
@@ -52,7 +52,7 @@ if ($number_rows == 1) {
         setcookie('remember', $token, time() + 60 * 60 * 24 * 30);
     }
 
-    if ($each['permission'] == 1) {
+    if ($each['permission'] === 1) {
         header('location: ../admin');
         exit;
     } else {

@@ -14,19 +14,19 @@ $sql = "SELECT * FROM Users WHERE email = '$email'";
 $result = mysqli_query($connect, $sql);
 $number_rows = mysqli_num_rows($result);
 
-if ($number_rows == 1) {
+if ($number_rows === 1) {
     $_SESSION['error'] = "Ai đó đã dùng email này rồi!";
     header('location: ./');
     exit;
 }
 
-if ($password != $confirm_password) {
+if ($password !== $confirm_password) {
     $_SESSION['error'] = "Bạn có chắc là nhớ mật khẩu mình đã đặt?";
     header('location: ./');
     exit;
 }
 
-if ($name == '' || $email == '' || $password == '' || $confirm_password == '') {
+if ($name === '' || $email === '' || $password === '' || $confirm_password === '') {
     $_SESSION['error'] = "Á à tắt Javascript à hacker lỏ:)";
     header('location: ./');
     exit;

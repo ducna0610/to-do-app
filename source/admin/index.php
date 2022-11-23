@@ -2,7 +2,7 @@
 session_start();
 require '../connect.php';
 
-if (empty($_SESSION['id_user']) || ($_SESSION['permission']) == 0) {
+if (empty($_SESSION['id_user']) === 0) {
     header('location: ../');
 }
 

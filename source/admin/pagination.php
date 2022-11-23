@@ -1,6 +1,6 @@
 <nav aria-label="Page navigation example">
     <ul class="pagination">
-        <?php if ($page == 1) { ?>
+        <?php if ($page === 1) { ?>
             <li class="page-item disabled">
                 <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -17,7 +17,7 @@
         <?php } ?>
 
         <?php for ($i = 1; $i <= $pages; $i++) { ?>
-            <?php if ($i == $page) { ?>
+            <?php if ($i === $page) { ?>
                 <li class="page-item active">
                     <a class="page-link" href="./admin.php?page=<?php echo $i ?>">
                         <?php echo $i ?>
@@ -34,7 +34,7 @@
 
 
 
-        <?php if ($page == $pages) { ?>
+        <?php if ($page === $pages) { ?>
             <li class="page-item disabled">
                 <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>

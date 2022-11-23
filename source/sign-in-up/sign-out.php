@@ -2,10 +2,7 @@
 
 session_start();
 
-unset($_SESSION['id_user']);
-unset($_SESSION['name']);
-unset($_SESSION['permisson']);
-$_SESSION['permission'] = 0;
+session_destroy();
 
 setcookie('remember', null, -1);
 

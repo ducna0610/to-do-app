@@ -10,7 +10,7 @@ if (isset($_COOKIE['remember'])) {
     $result = mysqli_query($connect, $sql);
     $number_rows = mysqli_num_rows($result);
 
-    if ($number_rows == 1) {
+    if ($number_rows === 1) {
         $each = mysqli_fetch_array($result);
         $_SESSION['id_user'] = $each['id_user'];
         $_SESSION['name'] = $each['name'];
