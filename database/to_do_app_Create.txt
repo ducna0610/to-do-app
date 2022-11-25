@@ -14,7 +14,7 @@ CREATE TABLE Users (
   name       varchar(50) NOT NULL, 
   email      varchar(50) NOT NULL, 
   password   varchar(200) NOT NULL, 
-  token      varchar(255) NOT NULL, 
+  token      varchar(255), 
   permission int(10) NOT NULL, 
   online     timestamp DEFAULT current_timestamp() NOT NULL, 
   PRIMARY KEY (id_user), 

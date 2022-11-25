@@ -7,14 +7,14 @@
     <a href="./sign-in-up/sign-out.php" class="nav-link">Sign out</a>
   <?php } ?>
   <?php if (isset($_SESSION['permission'])) { ?>
-    <?php if ($_SESSION['permission'] === 1) { ?>
+    <?php if ($_SESSION['permission'] === '1') { ?>
       <a href="./admin" class="nav-link">Admin</a>
     <?php } ?>
 
-    <?php if ($_SESSION['permission'] === 0) { ?>
+    <?php if ($_SESSION['permission'] === '0') { ?>
       <a href="donate.php" class="nav-link">
         <i class="fas fa-donate "></i>
-        donate
+        Donate
       </a>
     <?php } ?>
   <?php } ?>
