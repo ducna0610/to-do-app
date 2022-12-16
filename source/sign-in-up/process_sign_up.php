@@ -50,6 +50,28 @@ $_SESSION['permission'] = 0;
 mysqli_close($connect);
 
 include '../mail/send_mail.php';
-sendMail($email, $name, 'Đăng ký tài khoản thành công', 'Cảm ơn bạn đã đăng ký:3 <br> Tặng bạn 1 con iPhone 14 ==> chi tiết:  <a href = "hacked.com">nhấn vào đây</a>');
+sendMail(
+    $email,
+    $name,
+    'Đăng ký tài khoản thành công',
+    '<div>
+        <h1>To Do App</h1>
+        <b>Hello</b>
+        <br>
+        Welcome to To Do App
+        <br>
+        
+        <a href="https://ducna0610.epizy.com/to-do-app">Trang chủ</a>
+        <br>
+        
+        <i>
+            Thank you for using our application!
+        </i>
+        <br>
+        Regards,
+        <br>
+        To Do App
+    </div>'
+);
 
 header('location: ../');

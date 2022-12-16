@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function current_url()
 {
@@ -6,7 +7,7 @@ function current_url()
     return $url;
 }
 
-if (($_POST['email']) === '') {
+if (($_POST['email']) == '') {
     $_SESSION['error'] = "Hacker lỏ :)";
     header('location: index.php');
     exit;
@@ -38,12 +39,13 @@ if (mysqli_num_rows($result) === 1) {
 
     require '../mail/send_mail.php';
     $title = "Change New Password";
-    $content = '<a href="' . $link . '">Bấm vào đây để đổi mật khẩu</a> (link chỉ có hiệu lực trong ngày hôm nay!)';
+    $content = '<a href="' . $link . '">Bấm vào đây để đổi mật khẩu</a> (link chỉ có hiệu lực trong 24h!)';
     sendMail($email, $name, $title, $content);
-    header('location: https://mail.google.com');
+
+    $_SESSION['error'] = "Vui lòng kiểm tra email";
+    header('location: index.php');
     exit;
 } else {
-    session_start();
     $_SESSION['error'] = "Tài khoản không tồn tại!";
     header('location: index.php');
 }

@@ -42,7 +42,7 @@ mysqli_close($connect);
                             </div>
                             <div class="modal-footer">
                                 <a href="delete.php?id_todo=<?php echo $each['id_todo'] ?>">
-                                    <button type="button" class="btn btn-danger">Delete</button>
+                                    <button type="button" onclick="confirm('Are you sure?')" class="btn btn-danger">Delete</button>
                                 </a>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Save changes</button>

@@ -25,10 +25,24 @@ $page = 1;
 if (isset($_GET['page']))
     $page = $_GET['page'];
 
-$limit = 8;
+$limit = 6;
 
 $pages = ceil($no_user / $limit);
 
+$range = 10;
+
+$min_page = 1;
+$max_page = $pages;
+
+if ($pages > $range) {
+    if ($page > ($pages / 2)) {
+        $min_page = $pages - $range;
+        $max_page = $page;
+    } else {
+        $min_page = $page - ($range / 2);
+        $max_page = $page + ($range / 2);
+    }
+}
 
 $over = $limit * ($page - 1);
 
@@ -41,7 +55,7 @@ $array = mysqli_fetch_all($result);
 
 $num_rows = mysqli_num_rows($result);
 
-$sql = "SELECT COUNT(*), Users.id_user
+$sql = "SELECT COUNT(id_todo), Users.id_user
 FROM Users LEFT JOIN Todos
 ON Users.id_user = Todos.id_user
 WHERE permission = 0
@@ -60,6 +74,7 @@ mysqli_close($connect);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">

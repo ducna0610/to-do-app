@@ -4,7 +4,7 @@ require '../mail/send_mail.php';
 
 require '../connect.php';
 
-$sql = "DELETE FROM forgot_password WHERE day(create_at) != day(current_timestamp())";
+$sql = "DELETE FROM forgot_password WHERE (current_timestamp() - online) > 864000";
 mysqli_query($connect, $sql);
 
 mysqli_close($connect);

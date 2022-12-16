@@ -1,8 +1,6 @@
 const ul = document.querySelector("ul.todos");
 const searchFormInput = document.querySelector("form.search input");
 
-
-//SEARCH INPUT: PREVENT DEFAULT ACTION - LITTLE BUG I FOUND IN THE COURSE PROJECT
 searchFormInput.parentElement.addEventListener("submit", (e) =>
   e.preventDefault()
 );
@@ -10,8 +8,8 @@ searchFormInput.parentElement.addEventListener("submit", (e) =>
 //SEARCH AND FILTER TODOS
 const filterItems = (value) => {
   Array.from(ul.children).forEach((li) => {
-    if (!li.textContent.toLowerCase().includes(value)) li.classList.add("filtred");
-    else li.classList.remove("filtred");
+    if (!li.textContent.toLowerCase().includes(value)) li.classList.add("filtered");
+    else li.classList.remove("filtered");
   });
 };
 

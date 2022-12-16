@@ -40,5 +40,7 @@ id_user = '$id_user'";
 
 mysqli_query($connect, $sql);
 
+mysqli_close($connect);
+
 $_SESSION['error'] = "Đổi mật khẩu thành công!";
 header('location: ../sign-in-up');

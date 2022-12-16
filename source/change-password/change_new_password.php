@@ -1,7 +1,7 @@
-<?php   
+<?php
 session_start();
 
-if(empty($_GET['token_expire'])) {
+if (empty($_GET['token_expire'])) {
     $_SESSION['error'] = "Hacker lỏ :)";
     header('location: ../sign-in-up/');
     exit;
@@ -11,11 +11,14 @@ $token_expire = $_GET['token_expire'];
 require '../connect.php';
 $sql = "SELECT * FROM forgot_password WHERE token_expire = '$token_expire'";
 $result = mysqli_query($connect, $sql);
+
 if (mysqli_num_rows($result) === 0) {
     $_SESSION['error'] = "Link đã hết hiệu lực vui lòng chọn lại quên mật khẩu!";
     header('location: ../sign-in-up/');
     exit;
 }
+
+mysqli_close($connect);
 ?>
 
 <!DOCTYPE html>
